@@ -5,7 +5,6 @@ const LatestGlobal = styled(Box)`
   padding-bottom: 64px;
 `;
 const LatestContainer = styled(Grid)`
-  margin: 0 auto;
   max-width: 76%;
   padding-left: 27px;
   padding-right: 27px;

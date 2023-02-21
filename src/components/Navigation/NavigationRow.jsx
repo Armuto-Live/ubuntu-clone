@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, styled,Stack } from '@mui/material'
+import { Box, styled,Stack,Grid } from '@mui/material'
 import NavigationBanner from './NavigationBanner';
 
 
@@ -11,7 +11,7 @@ const Global=styled(Box)`
 const Container = styled(Stack)`
   margin: 0 auto;
   max-width: 76%;
-  padding-left: 27px;
+  padding-left: 1.5rem;
   padding-right: 27px;
   height: 100%;
   color:white;

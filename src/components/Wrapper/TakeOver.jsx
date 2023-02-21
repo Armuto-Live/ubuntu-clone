@@ -59,7 +59,7 @@ function TakeOver() {
         <Container>
           <Grid container alignContent="center" height="243.5px">
             <Grid item xs={11} sm={7} fontSize="1rem">
-              <Typography variant="h3" component="h1" mb="2%">
+              <Typography variant="h3" component="h1" mb="2%" sx={{Typography:{xs:"body1"}}}>
                 Cloud Pricing Report 2022
               </Typography>
               <Typography variant="h6" component="p" mb="2%">

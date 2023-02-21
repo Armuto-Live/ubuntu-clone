@@ -21,7 +21,7 @@ const ImageListItems = styled(Box)`
 
 const Image = styled(ImageListItem)`
   display: flex;
-  width:100%;
+  width:145px;
 `;
 
 function ModerEnterprise() {
@@ -42,9 +42,6 @@ function ModerEnterprise() {
             </Grid>
             <Grid item xs={6} lg={3}>
               <Image>
-                <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png" />
-                <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png" />
-                <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png" />
                 <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png" />
               </Image>
             </Grid>
