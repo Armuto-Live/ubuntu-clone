@@ -1,0 +1,25 @@
+.Navigation{
+    display:flex;
+    height: 3.94rem;
+    background-color: #333;
+}
+.NavigationRowStack{
+    display: flex;
+    margin: 0 auto;
+    width: 1296px;
+    padding-left: 27px;
+    padding-right: 27px;
+    
+}
+.NavigationBanner{
+    padding: 0 15px 0 15px;
+    background-color: #e95420;
+    width: 112px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.NavigationBannerItem{
+    display: flex;
+    width: 100%;
+}
