@@ -1,10 +1,12 @@
 import React from "react";
 import { Grid, styled, Box, Stack, Typography, Button } from "@mui/material";
 import Link from "@mui/material/Link";
+
 const LatestGlobal = styled(Box)`
   padding-bottom: 64px;
 `;
 const LatestContainer = styled(Grid)`
+  margin: 0 auto;
   max-width: 76%;
   padding-left: 27px;
   padding-right: 27px;

@@ -4,3 +4,11 @@
   padding-left: 27px;
   padding-right: 27px;
 }
+.p-strip{
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.lista{
+    list-style-type: disc;
+}
