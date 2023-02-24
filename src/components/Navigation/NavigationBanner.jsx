@@ -5,7 +5,7 @@ import './style.css'
 function NavigationBanner() {
   return (
     <Grid container className='NavigationBanner'>
-      <Grid item lg={12} className='NavigationBannerLogo'>
+      <Grid item className='NavigationBannerLogo'>
         <a className='NavigationBannerItem'>
           <img className='NavigationBannerImg' src={Logo} alt='Logo'></img>
         </a>

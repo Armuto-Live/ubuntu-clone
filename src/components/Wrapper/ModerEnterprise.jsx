@@ -1,61 +1,68 @@
 import React from "react";
-import { Grid, styled, Box, Stack, Typography } from "@mui/material";
+import { Grid, styled, Box, Stack, Typography, Button } from "@mui/material";
 import ImageListItem from "@mui/material/ImageListItem";
+import CustomTypography from "../Global/CustomTypography";
 
-const GlobalEnterprise = styled(Box)`
-  padding-top: 72px;
-`;
-const ContainerEnterprise = styled(Stack)`
-  margin: 0 auto;
-  max-width: 76%;
-  padding-left: 27px;
-  padding-right: 27px;
-  height: "61px";
-`;
+const GridContainer = styled(Grid)((theme) => ({
+  paddingTop: "72px",
+  paddingLeft: "24px",
+  paddingRight: "24px",
+}));
+const ImageListItems = styled(Box)((theme) => ({
+  display: "flex",
+  justifyContent:"center",
+  flexWrap: "wrap",
+}));
 
-const ImageListItems = styled(Box)`
-  background-color: aqua;
-  width: 50px;
-  height: 50px;
+const Image = styled("img")`
+  width: 29%;
 `;
-
-const Image = styled(ImageListItem)`
-  display: flex;
-  width:145px;
+const Separator = styled("hr")`
+  margin: 64px 0;
 `;
-
 function ModerEnterprise() {
   return (
     <>
-      <GlobalEnterprise>
-        <ContainerEnterprise>
-          <Grid container>
-            <Grid item xs={6}>
-              <Typography variant="h4" component="h2">
-                Modern enterprise open source
-              </Typography>
-              <Typography variant="h5" component="p">
-                Publisher of Ubuntu.
-                <br />
-                Security. Support. Managed Services.
-              </Typography>
+      <GridContainer container justifyContent="center">
+        <Grid item lg={9}>
+          <Grid container justifyContent="space-between">
+            <Grid item lg={6}>
+              <CustomTypography
+                variant="h3"
+                text="Modern enterprise open source"
+              />
+              <CustomTypography
+                variant="h5"
+                text="Security, support, and managed services from the publisher of Ubuntu."
+              />
+              <Button
+                variant="contained"
+                color="success"
+                sx={{ textTransform: "none" }}
+              >
+                Get Ubuntu Pro
+              </Button>
             </Grid>
-            <Grid item xs={6} lg={3}>
-              <Image>
-                <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png" />
-              </Image>
+            <Grid item container lg={6} alignItems="center">
+              <ImageListItems>
+                <Image
+                  src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png"
+                />
+                <Image
+                  src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png"
+                />
+                <Image
+                  src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png"
+                />
+                <Image
+                  src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png"
+                />
+              </ImageListItems>
             </Grid>
           </Grid>
-          <hr
-            style={{
-              width: "100%",
-              marginTop: "72px",
-              marginBottom: "72px",
-              backgroundColor: "black",
-            }}
-          />
-        </ContainerEnterprise>
-      </GlobalEnterprise>
+          <Separator />
+        </Grid>
+      </GridContainer>
     </>
   );
 }

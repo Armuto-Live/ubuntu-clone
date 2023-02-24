@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, styled, Box, Stack, Typography, Button } from "@mui/material";
+import { Grid, styled, Box, Toolbar, Typography, Button } from "@mui/material";
 import ImageListItem from "@mui/material/ImageListItem";
 import Link from "@mui/material/Link";
+import CustomTypography from "../Global/CustomTypography";
 const Global = styled(Box)`
   background-color: #772953;
   background-image: linear-gradient(
@@ -24,7 +25,7 @@ const Global = styled(Box)`
       rgba(255, 255, 255, 0) 100%
     ),
     linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%);
-  color: #fff;
+  display:flex;
   align-items: center;
   background-blend-mode: multiply, multiply, normal, normal;
   background-position: top right, top left, right bottom -1px, left top;
@@ -34,59 +35,50 @@ const Global = styled(Box)`
   margin: 0;
   padding-top: 4.2%;
   padding-bottom: 4.2%;
-`;
-const Container = styled(Stack)`
-  margin: 0 auto;
-  max-width: 76%;
-  padding-left: 27px;
-  padding-right: 27px;
-  height: 27rem;
-  display: flex;
-  justify-content: center;
-  align-item: center;
+  height: 35rem;
 `;
 
-const ImageContainer = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-item: center;
-`;
-
+const GridContainer = styled(Grid)((theme) => ({
+  paddingLeft: "24px",
+  paddingRight: "24px",
+}));
 function TakeOver() {
   return (
     <>
       <Global>
-        <Container>
-          <Grid container alignContent="center" height="243.5px">
-            <Grid item xs={11} sm={7} fontSize="1rem">
-              <Typography variant="h3" component="h1" mb="2%" sx={{Typography:{xs:"body1"}}}>
-                Cloud Pricing Report 2022
-              </Typography>
-              <Typography variant="h6" component="p" mb="2%">
-                Understand the impact of cloud pricing on cloud infrastructure
-                choices
-              </Typography>
-              <Button
-                variant="contained"
-                color="success"
-                sx={{ textTransform: "none", padding: "5.4px 16px" }}
-              >
-                <Link>
-                  <Typography variant="body1" color="white">
+        <GridContainer container justifyContent="center">
+          <Grid item xs={12} lg={9}>
+            <Grid container color="lightcyan" justifyContent="space-between">
+              <Grid item lg={8}>
+                <Box>
+                  <CustomTypography
+                    variant="h3"
+                    colordefault="true"
+                    text="Cloud Pricing Report 2022"
+                  />
+                  <CustomTypography
+                    variant="h5"
+                    colordefault="true"
+                    text="Understand the impact of cloud pricing on cloud infrastructure choices"
+                  ></CustomTypography>
+                  <Button
+                    variant="contained"
+                    colordefault="true"
+                    color="success"
+                    sx={{ textTransform: "none" }}
+                  >
                     Download free report
-                  </Typography>
-                </Link>
-              </Button>
-            </Grid>
-            <Grid item xs={5} sx={{ display: { xs: "none", lg: "block" } }}>
-              <ImageContainer>
-                <ImageListItem sx={{ width: "200px", height: "244px" }}>
-                  <img src="https://assets.ubuntu.com/v1/a0f23d1b-Savings.svg"></img>
-                </ImageListItem>
-              </ImageContainer>
+                  </Button>
+                </Box>
+              </Grid>
+              <Grid item lg={3} sx={{display:{xs:"none",lg:"block"}}}>
+                <Box sx={{ width: "200px" }}>
+                  <img src="https://assets.ubuntu.com/v1/a0f23d1b-Savings.svg" />
+                </Box>
+              </Grid>
             </Grid>
           </Grid>
-        </Container>
+        </GridContainer>
       </Global>
     </>
   );

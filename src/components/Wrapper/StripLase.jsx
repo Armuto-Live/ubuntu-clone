@@ -36,7 +36,6 @@ function StripLase() {
             <Link href="https://recruit-c7ff.kxcdn.com/recruit/wp-content/uploads/2020/05/he-developer-survey-2020.pdf">
             The 2020 HackerEarth Developer Survey
           </Link>
-            <img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_200,h_40/https://assets.ubuntu.com/v1/934a0626-Hackerearth_logo.svg"></img>
           </Grid>
         </StripLaseContainer>
       </StripLaseGlobal>

@@ -20,7 +20,6 @@ import {
 function ContainerMain() {
   return (
     <>
-      <Stack >
         <TakeOver/>
         <ShadowNotice/>
         <ModerEnterprise/>
@@ -28,7 +27,6 @@ function ContainerMain() {
         <StripLase/>
         <Strip/>
         <Prueba/>
-      </Stack>
     </>
   );
 }
