@@ -1,73 +1,51 @@
 import React from "react";
+import CustomTypography from "../Global/CustomTypography";
 import { Grid, styled, Box, Stack, Typography, Button } from "@mui/material";
+import CustomBottom from "../Global/CustomBottom";
+import CustomLink from "../Global/CustomLink";
 import Link from "@mui/material/Link";
 
-const LatestGlobal = styled(Box)`
-  padding-bottom: 64px;
-`;
-const LatestContainer = styled(Grid)`
-  margin: 0 auto;
-  max-width: 76%;
-  padding-left: 27px;
-  padding-right: 27px;
-  height: "61px";
-`;
+const GridContianer = styled(Grid)((theme) => ({
+  paddingBottom: "64px",
+  paddingLeft: "24px",
+  paddingRight: "24px",
+}));
+
 function LatestNew() {
   return (
-    <LatestGlobal>
-      <LatestContainer>
-        <Grid item>
-          <Typography variant="h5" sx={{marginBottom:"1%"}}>
-            Latest news from{" "}
-            <Link href="https://ubuntu.com/blog">our blog {"<"}</Link>
-          </Typography>
-        </Grid>
-        <Grid container>
-          <Grid item md={3}>
-            <Typography variant="body1" component="p">
-              19 February 2023
-            </Typography>
-            <Link href="https://ubuntu.com/blog/open-source-security-with-ubuntu-pro">
-              <Typography variant="h7">
-                Cloud computing security and compliance with Ubuntu Pro
-              </Typography>
-            </Link>
+    <GridContianer container justifyContent="center">
+      <Grid item lg={9}>
+        <Grid container justifyContent="space-between">
+          <Grid item lg={12}>
+            <CustomTypography variant="h4" text="Latest news from our blog >" />
           </Grid>
-          <Grid item md={3}>
-            
-          <Typography variant="body1" component="p">
-              19 February 2023
-            </Typography>
-            <Link href="https://ubuntu.com/blog/open-source-security-with-ubuntu-pro">
-              <Typography variant="h7">
-                Air gapped network: FIPS 140 compliance with Ubuntu
-              </Typography>
-            </Link>
-          </Grid>
-          <Grid item md={3}>
-            
-          <Typography variant="body1" component="p">
-              19 February 2023
-            </Typography>
-            <Link href="https://ubuntu.com/blog/open-source-security-with-ubuntu-pro">
-              <Typography variant="h7">
-              Course for deploying ROS applications now available in The Construct
-              </Typography>
-            </Link>
-          </Grid>
-          <Grid item md={3}>
-          <Typography variant="body1" component="p">
-              SPOTLIGHT
-            </Typography>
-            <Link href="https://ubuntu.com/blog/open-source-security-with-ubuntu-pro">
-              <Typography variant="h7">
-                Real-time Ubuntu is now generally available
-              </Typography>
-            </Link>
+          <Grid item lg={12}>
+            <Grid container>
+              <Grid item container lg={9} flexDirection="row">
+                <Grid item lg={4}>
+                  <CustomTypography text="24 February 2023" />
+                  <Link fontSize="1.2rem">Harnessing the potential of 5G with Kubernetes</Link>
+                </Grid>
+                <Grid item lg={4}>
+                  <CustomTypography text="24 February 2023" />
+                  <Link fontSize="1.2rem">What is real-time Linux? Part I</Link>
+                </Grid>
+                <Grid item lg={3}>
+                  <CustomTypography text="24 February 2023" />
+                  <Link fontSize="1.2rem">Closed loop architecture and persistent volumes for network
+                    functions – Highlights in OSM release THIRTEEN</Link>
+                </Grid>
+                <hr/>
+              </Grid>
+              <Grid item lg={3}>
+                <CustomTypography text="SPOTLIGTH" />
+                <Link>Elektrobit and Canonical announce EB corbos Linux – built on Ubuntu</Link>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-      </LatestContainer>
-    </LatestGlobal>
+      </Grid>
+    </GridContianer>
   );
 }
 

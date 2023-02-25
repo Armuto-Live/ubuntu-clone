@@ -12,9 +12,9 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 function PListItem(props) {
   return (
     <List>
-      <ListItem>
+      <ListItem sx={{padding:"0"}}>
         <ListItemIcon>
-          <CheckCircleIcon fontSize="small" width="15px" color="success" />
+          <CheckCircleIcon fontSize="small" width="20px" color="success" />
         </ListItemIcon>
         <ListItemText>
           <Typography variant="body2">{props.text}</Typography>
