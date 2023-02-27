@@ -12,3 +12,9 @@
 .lista{
     list-style-type: disc;
 }
+
+@media (min-width:460px){
+  .Grid{
+    flex-direction: column-reverse;
+  }
+}
