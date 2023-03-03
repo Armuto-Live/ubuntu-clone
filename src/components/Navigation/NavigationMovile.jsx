@@ -4,6 +4,7 @@ import { Grid, styled, AppBar, Button } from "@mui/material";
 import CustomTypography from "../Global/CustomTypography";
 import CustomBottom from "../Global/CustomBottom";
 import SearchIcon from '@mui/icons-material/Search';
+import SearchApp from "./SearchApp";
 
 
 const Container = styled(AppBar)((theme) => ({
@@ -28,22 +29,20 @@ function NavigationMovile() {
   return (
     <Container position="relative">
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <Grid
             container
             justifyContent="space-between"
             bgcolor="#e95420"
             sx={{ padding: "0 24px" }}
           >
-            <Grid item xs={3}>
+            <Grid item xs={1}>
               <Button>
                 <img src={Logo} />
               </Button>
             </Grid>
-            <Grid item container xs={9} justifyContent="flex-end" alignItems="center">
-              <Button sx={{color:"white"}}> 
-                <SearchIcon/>
-              </Button>
+            <Grid item container xs={11} justifyContent="flex-end" alignItems="center">
+              <SearchApp/>
               <Button sx={{ textTransform: "none" }}>
                 <CustomTypography colordefault="true" text="Sign in" />
               </Button>
