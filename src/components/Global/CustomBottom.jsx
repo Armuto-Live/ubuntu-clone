@@ -10,6 +10,7 @@ const StyledBottom=styled(Button)((theme)=>({
   padding:"0",
   fontSize:"1.1rem",
   textAlign:"center",
+  color:"white"
 }))
 function CustomBottom(props) {
   return (

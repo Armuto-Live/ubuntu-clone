@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-
+import { orange } from "@mui/material/colors";
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -8,6 +8,14 @@ const theme = createTheme({
       md: 620,
       lg: 1036,
       xl: 1681,
+    },
+    palette: {
+      primary: {
+        main: "#000e35",
+      },
+      secondary: {
+        main: "#f50057",
+      },
     },
   },
 });
