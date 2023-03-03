@@ -1,10 +1,10 @@
 import React from "react";
-import Logo from "../../assets/ubuntu.svg";
+import Logo from "../../../assets/ubuntu.svg";
 import { Grid, styled, AppBar, Button } from "@mui/material";
-import CustomTypography from "../Global/CustomTypography";
-import CustomBottom from "../Global/CustomBottom";
+import CustomTypography from "../../Global/CustomTypography";
+import CustomBottom from "../../Global/CustomBottom";
 import SearchIcon from '@mui/icons-material/Search';
-import SearchApp from "./SearchApp";
+import SearchApp from "../SearchApp";
 
 
 const Container = styled(AppBar)((theme) => ({
@@ -36,12 +36,12 @@ function NavigationMovile() {
             bgcolor="#e95420"
             sx={{ padding: "0 24px" }}
           >
-            <Grid item xs={1}>
+            <Grid item xs={2}>
               <Button>
                 <img src={Logo} />
               </Button>
             </Grid>
-            <Grid item container xs={11} justifyContent="flex-end" alignItems="center">
+            <Grid item container xs={8} justifyContent="flex-end" alignItems="center">
               <SearchApp/>
               <Button sx={{ textTransform: "none" }}>
                 <CustomTypography colordefault="true" text="Sign in" />

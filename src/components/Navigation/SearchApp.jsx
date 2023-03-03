@@ -33,7 +33,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(2)})`,
-    width: '100%',[theme.breakpoints.up('sm')]: {
+    width: '100%',[theme.breakpoints.up('xs')]: {
         width: '1ch',
         '&:focus': {
           width: '200px',
@@ -42,7 +42,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           position:"relative",
         },
       },
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('sm')]: {
         width: '1ch',
         '&:focus': {
           minWidth: '350px',
