@@ -32,15 +32,15 @@ const BottonNav=styled(Button)((theme)=>({
 function NavigationDesktop() {
   return (
     <CustomToolbar position="fixed">
-      <Grid container justifyContent="center">
+      <Grid container justifyContent="center" sx={{paddingLeft:"24px"}}>
         <Grid item md={12} lg={9}>
-          <Grid container justifyContent="space-evenly">
+          <Grid container justifyContent="space-between">
             <Grid item>
               <ButtonLogo>
                 <img src={Logo}/>
               </ButtonLogo>
             </Grid>
-            <Grid item md={10}>
+            <Grid item md={10} mr="auto">
               <Grid container justifyContent="space-between">
                 <Grid item md={8}>
                   <BottonNav variant="contained" color="primary">
@@ -56,7 +56,7 @@ function NavigationDesktop() {
                     Download
                   </BottonNav>
                 </Grid>
-                <Grid container item md={4} justifyContent="center">
+                <Grid container item md={4} justifyContent="flex-end">
                   <BottonNav>
                     Search
                   </BottonNav>

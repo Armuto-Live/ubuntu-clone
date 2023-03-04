@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Logo from "../../../assets/ubuntu.svg";
 import { Grid, styled, AppBar, Button } from "@mui/material";
 import CustomTypography from "../../Global/CustomTypography";
@@ -12,55 +13,35 @@ const Container = styled(AppBar)((theme) => ({
 }));
 
 const NavigationButton = styled(Button)((theme) => ({
-  color: "white",
+  color:"white",
   textTransform:"none",
-  padding:"16px 25%",
 }));
-
-const SearchContainer=styled("div")((theme)=>({
-    position:"relative",
-    borderRadius:"2px",
-    background:"red",
-    width:"100%",
-}));
-
 
 function NavigationMovile() {
+  const [show,setShow]=useState(true);
   return (
     <Container position="relative">
       <Grid container>
-        <Grid item xs={12} >
-          <Grid
-            container
-            justifyContent="space-between"
-            bgcolor="#e95420"
-            sx={{ padding: "0 24px" }}
-          >
-            <Grid item xs={2}>
-              <Button>
-                <img src={Logo} />
-              </Button>
+        <Grid item xxs={12}>
+          <Grid item container justifyContent="space-between" bgcolor="#e95420" pl="10px" pr="10px">
+            <Grid item>
+              <NavigationButton>
+                <img src={Logo}/>
+              </NavigationButton>
             </Grid>
-            <Grid item container xs={8} justifyContent="flex-end" alignItems="center">
-              <SearchApp/>
-              <Button sx={{ textTransform: "none" }}>
-                <CustomTypography colordefault="true" text="Sign in" />
-              </Button>
+            <Grid item xxs={9} container alignItems="center" justifyContent="flex-end">
+                <NavigationButton onClick={()=>setShow(!show)}>
+                  <SearchApp/>
+                </NavigationButton>
+                <NavigationButton >Sign In</NavigationButton>
             </Grid>
-            
           </Grid>
-          <Grid container justifyContent="space-between">
-            <Grid item xs={3}>
-              <NavigationButton>Enterprise</NavigationButton>
-            </Grid>
-            <Grid item xs={3}>
-              <NavigationButton>Developer</NavigationButton>
-            </Grid>
-            <Grid item xs={3}>
-              <NavigationButton>Community</NavigationButton>
-            </Grid>
-            <Grid item xs={3}>
-              <NavigationButton>Download</NavigationButton>
+          <Grid container>
+            <Grid item container xxs={12}>
+              <CustomBottom texto="Enterprise" />
+              <CustomBottom texto="Developer" />
+              <CustomBottom texto="Community" />
+              <CustomBottom texto="Download"/>
             </Grid>
           </Grid>
         </Grid>

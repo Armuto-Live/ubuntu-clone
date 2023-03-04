@@ -48,7 +48,7 @@ function TakeOver() {
       <Global>
         <GridContainer container justifyContent="center">
           <Grid item xs={12} lg={9}>
-            <Grid container color="lightcyan" justifyContent="space-between">
+            <Grid container justifyContent="space-between">
               <Grid item lg={8}>
                 <Box>
                   <CustomTypography
@@ -71,7 +71,7 @@ function TakeOver() {
                   </Button>
                 </Box>
               </Grid>
-              <Grid item lg={3} sx={{display:{xs:"none",lg:"block"}}}>
+              <Grid item lg={3} sx={{display:{xxs:"none",lg:"block"}}}>
                 <Box sx={{ width: "200px" }}>
                   <img src="https://assets.ubuntu.com/v1/a0f23d1b-Savings.svg" />
                 </Box>

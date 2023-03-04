@@ -1,6 +1,6 @@
 import React from "react";
-import FooterMobile from "./FooterMobile";
-import FooterDesktop from "./FooterDesktop";
+import FooterMobile from "./mobile/FooterMobile";
+import FooterDesktop from "./desktop/FooterDesktop";
 import { useTheme } from "@mui/system";
 import { useMediaQuery } from "@mui/material";
 

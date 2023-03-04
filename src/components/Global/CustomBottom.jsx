@@ -3,14 +3,9 @@ import Button from '@mui/material/Button'
 import { styled } from '@mui/material'
 
 const StyledBottom=styled(Button)((theme)=>({
-  display:"flex",
-  justifyContent:"flex-start",
-  alignItems:"flex-start",
   textTransform:"none",
-  padding:"0",
-  fontSize:"1.1rem",
-  textAlign:"center",
-  color:"white"
+  color:"white",
+  width:"25%"
 }))
 function CustomBottom(props) {
   return (

@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import CustomAccordion from '../Global/CustomAccordion'
+import CustomAccordion from '../CustomAccordion'
+
+const data =[
+  {details:"hola"}
+]
 function FooterMobile() {
-  const data=[
-    {title:"title1"}
-  ]
   return (
     <>
-      <CustomAccordion tittle="Title1" details="asd" />
+      <CustomAccordion tittle="OpenStack" details={["data","asdasd","tercero"]} />
       <CustomAccordion tittle="Title2" details="asd" />
     </>
   )

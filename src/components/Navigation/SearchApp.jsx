@@ -7,22 +7,17 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  '&:hover': {
-    backgroundColor: "#e95420",
-  },
   marginLeft: 0,
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
+  [theme.breakpoints.up('xxs')]: {
     width: 'auto',
   },
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 3),
+  padding: theme.spacing(0, 2),
   height: '100%',
   position: 'absolute',
-  pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -32,23 +27,23 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(2)})`,
-    width: '100%',[theme.breakpoints.up('xs')]: {
-        width: '1ch',
+    // vertical padding + font size from searchIcon
+    paddingLeft: `2.5rem`,
+    width: '0ch',
         '&:focus': {
-          width: '200px',
-          backgroundColor: "#f5f5f5",
-          border:"2px solid #2E96FF",
-          position:"relative",
-        },
-      },
-      [theme.breakpoints.up('sm')]: {
-        width: '1ch',
-        '&:focus': {
-          minWidth: '350px',
+          minWidth: '66vw',
+          paddingLeft: `12px`,
           backgroundColor: "#f5f5f5",
           border:"2px solid #2E96FF",
           placeholder:"search",
+          color:"black",
+      },
+      [theme.breakpoints.up('sm')]: {
+        width: '0',
+        '&:focus': {
+          minWidth: '75vw',
+          backgroundColor: "#f5f5f5",
+          border:"2px solid #2E96FF",
         },
       },
   },
@@ -60,7 +55,7 @@ function SearchApp() {
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
-      <StyledInputBase/>
+      <StyledInputBase placeholder='Search our sites'/>
     </Search>
   )
 }
