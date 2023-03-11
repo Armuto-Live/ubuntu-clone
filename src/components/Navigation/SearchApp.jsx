@@ -41,9 +41,36 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       [theme.breakpoints.up('sm')]: {
         width: '0',
         '&:focus': {
-          minWidth: '75vw',
+          minWidth: '70vw',
           backgroundColor: "#f5f5f5",
           border:"2px solid #2E96FF",
+        },
+      },
+      [theme.breakpoints.up('md')]: {
+        width: '0',
+        '&:focus': {
+          minWidth: '78vw',
+          backgroundColor: "#f5f5f5",
+          border:"2px solid #2E96FF",
+          marginRight:"550px"
+        },
+      },
+      [theme.breakpoints.up('lg')]: {
+        width: '0',
+        '&:focus': {
+          minWidth: '60vw',
+          backgroundColor: "#f5f5f5",
+          border:"2px solid #2E96FF",
+          marginRight:"550px"
+        },
+      },
+      [theme.breakpoints.up('xl')]: {
+        width: '0',
+        '&:focus': {
+          minWidth: '60vw',
+          backgroundColor: "#f5f5f5",
+          border:"2px solid #2E96FF",
+          marginRight:"750px",
         },
       },
   },

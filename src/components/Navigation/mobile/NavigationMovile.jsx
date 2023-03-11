@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import Logo from "../../../assets/ubuntu.svg";
 import { Grid, styled, AppBar, Button } from "@mui/material";
 import CustomTypography from "../../Global/CustomTypography";
-import CustomBottom from "../../Global/CustomBottom";
+import CustomBottom from "../LinkButton";
 import SearchIcon from '@mui/icons-material/Search';
 import SearchApp from "../SearchApp";
 
@@ -18,7 +18,27 @@ const NavigationButton = styled(Button)((theme) => ({
 }));
 
 function NavigationMovile() {
-  const [show,setShow]=useState(true);
+
+  const [focus,setFocus]=useState();
+  const ref=useRef();
+
+  const handleFocus=(event)=>{
+    const focusValue=event.target.value;
+    if(focus===focus){
+      setFocus(focusValue);
+      ref.current.style.visibility="hidden"
+      ref.current.style.position="absolute"
+    }
+  }
+
+  const handleBlur=(event)=>{
+    const blurValue=event.target.value;
+    if(focus===blurValue){
+      ref.current.style.visibility="visible"
+      ref.current.style.position="relative"
+    }
+  }
+
   return (
     <Container position="relative">
       <Grid container>
@@ -30,10 +50,10 @@ function NavigationMovile() {
               </NavigationButton>
             </Grid>
             <Grid item xxs={9} container alignItems="center" justifyContent="flex-end">
-                <NavigationButton onClick={()=>setShow(!show)}>
+                <NavigationButton onFocus={handleFocus} onBlur={handleBlur} >
                   <SearchApp/>
                 </NavigationButton>
-                <NavigationButton >Sign In</NavigationButton>
+                <NavigationButton ref={ref}>Sign In</NavigationButton>
             </Grid>
           </Grid>
           <Grid container>

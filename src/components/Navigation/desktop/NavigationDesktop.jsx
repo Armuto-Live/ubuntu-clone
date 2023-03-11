@@ -1,6 +1,8 @@
 import React from "react";
+import { useState,useRef } from "react";
 import { styled, AppBar, Grid, Button } from "@mui/material";
 import Logo from "../../../assets/ubuntu.svg";
+import SearchApp from "../SearchApp";
 import CustomBottom from "../../Global/CustomBottom";
 import SearchIcon from "@mui/icons-material/Search";
 import { height } from "@mui/system";
@@ -29,7 +31,30 @@ const BottonNav=styled(Button)((theme)=>({
   background:"#333",
   boxShadow:"none"
 }))
+
+
 function NavigationDesktop() {
+
+  const [focus,setFocus]=useState();
+  const ref=useRef();
+
+  const handleFocus=(event)=>{
+    const focusValue=event.target.value;
+    if(focus===focus){
+      setFocus(focusValue);
+      ref.current.style.visibility="hidden"
+      ref.current.style.position="absolute"
+    }
+  }
+
+  const handleBlur=(event)=>{
+    const blurValue=event.target.value;
+    if(focus===blurValue){
+      ref.current.style.visibility="visible"
+      ref.current.style.position="relative"
+    }
+  }
+
   return (
     <CustomToolbar position="fixed">
       <Grid container justifyContent="center" sx={{paddingLeft:"24px"}}>
@@ -57,10 +82,10 @@ function NavigationDesktop() {
                   </BottonNav>
                 </Grid>
                 <Grid container item md={4} justifyContent="flex-end">
-                  <BottonNav>
-                    Search
+                  <BottonNav onFocus={handleFocus} onBlur={handleBlur}>
+                    <SearchApp/>
                   </BottonNav>
-                  <BottonNav>
+                  <BottonNav ref={ref}>
                     Sign in
                   </BottonNav>
                 </Grid>

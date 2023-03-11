@@ -7,10 +7,7 @@ const data =[
 ]
 function FooterMobile() {
   return (
-    <>
-      <CustomAccordion tittle="OpenStack" details={["data","asdasd","tercero"]} />
-      <CustomAccordion tittle="Title2" details="asd" />
-    </>
+      <CustomAccordion/>
   )
 }
 

@@ -6,7 +6,7 @@ import { useMediaQuery } from "@mui/material";
 
 function Footer() {
   const theme = useTheme();
-  const points=useMediaQuery(theme.breakpoints.down('md'));
+  const points=useMediaQuery(theme.breakpoints.down('sm'));
   return <>
     {points ? <FooterMobile/> : <FooterDesktop/>}
   </>;

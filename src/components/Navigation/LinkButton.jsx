@@ -4,8 +4,8 @@ import { styled } from '@mui/material'
 
 const StyledBottom=styled(Button)((theme)=>({
   textTransform:"none",
-  color:"black",
-  marginRight:"16px",
+  color:"white",
+  width:"25%"
 }))
 function CustomBottom(props) {
   return (
