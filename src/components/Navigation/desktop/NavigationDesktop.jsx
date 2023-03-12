@@ -22,7 +22,7 @@ const ButtonLogo = styled(Button)((theme) => ({
   width:"110px",
   height:"56px",
 }));
-const BottonNav=styled(Button)((theme)=>({
+const BottonNav=styled('button')((theme)=>({
   color:"white",
   height:"56px",
   textTransform:"none",
@@ -37,6 +37,7 @@ function NavigationDesktop() {
 
   const [focus,setFocus]=useState();
   const ref=useRef();
+  const ref2=useRef();
 
   const handleFocus=(event)=>{
     const focusValue=event.target.value;
@@ -44,6 +45,8 @@ function NavigationDesktop() {
       setFocus(focusValue);
       ref.current.style.visibility="hidden"
       ref.current.style.position="absolute"
+      ref2.current.style.visibility="hidden"
+      ref2.current.style.position="absolute"
     }
   }
 
@@ -52,6 +55,8 @@ function NavigationDesktop() {
     if(focus===blurValue){
       ref.current.style.visibility="visible"
       ref.current.style.position="relative"
+      ref2.current.style.visibility="visible"
+      ref2.current.style.position="relative"
     }
   }
 
@@ -67,11 +72,11 @@ function NavigationDesktop() {
             </Grid>
             <Grid item md={10} mr="auto">
               <Grid container justifyContent="space-between">
-                <Grid item md={8}>
-                  <BottonNav variant="contained" color="primary">
+                <Grid item md={8} ref={ref2}>
+                  <BottonNav variant="contained" color="primary" >
                     Enterprise
                   </BottonNav>
-                  <BottonNav variant="contained" color="primary">
+                  <BottonNav variant="contained" color="primary"  >
                     Developer
                   </BottonNav>
                   <BottonNav variant="contained" color="primary">
@@ -81,7 +86,7 @@ function NavigationDesktop() {
                     Download
                   </BottonNav>
                 </Grid>
-                <Grid container item md={4} justifyContent="flex-end">
+                <Grid item md={2}>
                   <BottonNav onFocus={handleFocus} onBlur={handleBlur}>
                     <SearchApp/>
                   </BottonNav>

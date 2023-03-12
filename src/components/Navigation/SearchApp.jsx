@@ -24,7 +24,6 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -65,12 +64,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         },
       },
       [theme.breakpoints.up('xl')]: {
-        width: '0',
+        width: '0ch',
         '&:focus': {
-          minWidth: '60vw',
-          backgroundColor: "#f5f5f5",
+          position:"relative",
+          backgroundColor: "red",
           border:"2px solid #2E96FF",
-          marginRight:"750px",
         },
       },
   },

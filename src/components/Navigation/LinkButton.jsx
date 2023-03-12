@@ -14,5 +14,4 @@ function CustomBottom(props) {
     </StyledBottom>
   )
 }
-
-export default CustomBottom
+export default CustomBottom  

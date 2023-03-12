@@ -1,21 +1,31 @@
 import * as React from 'react';
+import { AccordionDetails, AccordionSummary, Box,Link } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TitleAccordion from './TitleAccordion';
 import SubTitleAccordion from './SubTitleAccordion';
+import { DataFooter } from "../../constants/Footer";
+
+const datos = DataFooter.map((column) => (
+  <Box mb="24px">
+    {column.menu.map((subTitle) => (
+      <Box>
+        <Link underline="hover" color="black">{subTitle.name}</Link>
+      </Box>
+    ))}
+  </Box>
+));
 
 function CustomAccordion() {
   return (
     <>
       <Accordion>
-        <TitleAccordion title="OpenStack"/>
-        <SubTitleAccordion subTitle="What is OpenStack"/>
-        <SubTitleAccordion subTitle="Features"/>
-        <SubTitleAccordion subTitle="Managed"/>
-        <SubTitleAccordion subTitle="Consulting"/>
-        <SubTitleAccordion subTitle="Install"/>
-        <SubTitleAccordion subTitle="Support"/>
+        <TitleAccordion title="Ceph"/>
+        <AccordionDetails>
+          {datos[0]}
+          {datos[1]}
+        </AccordionDetails>
       </Accordion>
       <Accordion>
         <TitleAccordion title="Ceph"/>

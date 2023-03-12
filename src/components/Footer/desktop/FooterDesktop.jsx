@@ -34,7 +34,7 @@ const datos = DataFooter.map((column) => (
 
 const IconContainer=styled(Stack)((theme)=>({
   display:"flex",
-  flexDirection:"column"
+  flexDirection:"row"
 }))
 
 function filtrar(props){
@@ -99,13 +99,15 @@ function FooterDesktop() {
           <Grid container>
             <Grid item md={8} lg={6} justifyContent="space-between">
               <Grid container>
-                <CustomBottom texto="Contact us" variant="outlined"/>
-                <CustomBottom texto="About us"/>
-                <CustomBottom texto="Community"/>
-                <CustomBottom texto="Careers"/>
-                <CustomBottom texto="Blog"/>
-                <CustomBottom texto="Resources"/>
-                <CustomBottom texto="Press centre"/>
+                <Box pb="54px">
+                  <CustomBottom texto="Contact us" variant="outlined"/>
+                  <CustomBottom texto="About us"/>
+                  <CustomBottom texto="Community"/>
+                  <CustomBottom texto="Careers"/>
+                  <CustomBottom texto="Blog"/>
+                  <CustomBottom texto="Resources"/>
+                  <CustomBottom texto="Press centre"/>
+                </Box>
                 <Typography variant="body1" color="initial">
                   © 2023 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.
                 </Typography>
