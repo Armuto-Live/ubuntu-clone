@@ -1,24 +1,23 @@
 import React from 'react'
 import { Link,styled,Box } from '@mui/material'
+import Line from './Line'
 
 const CustomLink=styled(Link)((theme)=>({
-    fontWeight:"400",
+    paddingBottom:"4.5px",
+    marginBottom:"4.5px",
+    fontSize:".97rem",
     "&::after":{
         content:'""',
     }
 }))
 
-const CustomLine=styled('hr')((theme)=>({
-    marginTop:"4px",
-    border:"1px solid #ECECEC",
-}))
 
 function LinkEnterprise(props) {
+  const HiddenLine=(props.HiddenLine)? <div></div>:<Line/>;
   return (
     <>
         <Box >
-            <CustomLink underline='hover'>{props.link}</CustomLink>
-            <CustomLine/>
+            <CustomLink underline='hover'>{props.link} {HiddenLine} </CustomLink>
         </Box>
     </>
   )

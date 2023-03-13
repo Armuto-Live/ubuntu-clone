@@ -5,6 +5,7 @@ import { Box,Link,styled } from '@mui/material';
 
 const CustomTitle=styled(Link)((theme)=>({
     marginBottom:"18px",
+    paddingBottom:"7.209px",
     "&:hover": {
         color: "#7D42B8",
     }
@@ -14,7 +15,7 @@ function Title(props) {
   return (
     <>
     <Box display="flex" alignItems="center">
-        <CustomTitle variant='h5' underline='hover' href='#' target="_blank">
+        <CustomTitle variant={props.variant} underline='hover' href='#' target="_blank">
             {props.title}{" >"}
         </CustomTitle>
     </Box>
